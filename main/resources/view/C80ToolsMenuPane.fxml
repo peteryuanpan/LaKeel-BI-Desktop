@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.tools.controller.C80ToolsMenuPane">
+   <children>
+      <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton onAction="#userFired" text="%P80.menu.user">
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT" size="3em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#roleFired" text="%P80.menu.role">
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT_MULTIPLE" size="3em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#permissionFired" text="%P80.menu.permission">
+               <graphic>
+                  <MaterialDesignIconView glyphName="KEY" size="3em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#scheduleFired" text="%P80.menu.schedule">
+               <graphic>
+                  <MaterialDesignIconView glyphName="CALENDAR_CLOCK" size="3em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#domainFired" text="%P80.menu.domain">
+               <graphic>
+                  <MaterialDesignIconView glyphName="DOMAIN" size="3em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#settingFired" text="%P80.menu.setting" visible="false">
+               <graphic>
+                  <MaterialDesignIconView glyphName="SETTINGS" size="3em" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

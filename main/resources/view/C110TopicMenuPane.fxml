@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.adhoc.controller.C110TopicMenuPane">
+	<children>
+		<VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<JFXButton fx:id="selectField" onAction="#selectField" text="%P110.step.select">
+					<graphic>
+				    	<MaterialDesignIconView glyphName="VIEW_MODULE" size="3em" />
+				    </graphic>
+				</JFXButton>
+				<JFXButton fx:id="filterField" onAction="#filterField" text="%P110.step.filter">
+				    <graphic>
+				    	<MaterialDesignIconView glyphName="FILTER" size="3em" />
+				    </graphic>
+				</JFXButton>
+				<JFXButton fx:id="displayField" onAction="#displayField" text="%P110.step.display">
+				    <graphic>
+				    	<MaterialDesignIconView glyphName="VIEW_LIST" size="3em" />
+				    </graphic>
+				</JFXButton>
+		</children>
+	</VBox>
+	</children>
+</AnchorPane>

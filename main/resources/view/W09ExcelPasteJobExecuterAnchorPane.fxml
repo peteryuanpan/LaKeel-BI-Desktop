@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorPane" minHeight="500.0" minWidth="800.0" prefHeight="500" prefWidth="800" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.controller.W09ExcelPasteJobExecuterController">
+	<children>
+		<Label text="%W09.label_text" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0">
+			<graphic>
+				<MaterialDesignIconView glyphName="FILE_EXCEL_BOX" size="2.0em" />
+			</graphic>
+		</Label>
+		<JFXTreeTableView fx:id="excelJobTable" disable="false" editable="false" prefHeight="383.0" prefWidth="547.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
+			<columns>
+			<JFXTreeTableColumn fx:id="number" text="%W08.table.number" />
+				<JFXTreeTableColumn fx:id="reportLabel" text="%W08.table.label" />
+				<JFXTreeTableColumn fx:id="targetColumns" text="%W08.table.column" />
+				<JFXTreeTableColumn fx:id="sheet" text="%W08.table.sheet" />
+				<JFXTreeTableColumn fx:id="cell" text="%W08.table.cell" />
+				<JFXTreeTableColumn fx:id="progress" text="%W08.table.status" />
+			</columns>
+		</JFXTreeTableView>
+      <VBox fx:id="statusVBox" maxWidth="50.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+         <children>
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </VBox>
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0" />
+		<HBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+			<children>
+				<JFXButton fx:id="completeButton" layoutY="27.0" minWidth="65.0" mnemonicParsing="false" onAction="#complete" prefHeight="30.0" styleClass="button-execute" text="%W09.button.complete.text" />
+				<JFXButton fx:id="openButton" minWidth="65.0" mnemonicParsing="false" onAction="#open" prefHeight="30.0" styleClass="edit-job" text="%W09.button.open.text" />
+			</children>
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</padding>
+		</HBox>
+		<HBox alignment="TOP_RIGHT" prefHeight="44.0" prefWidth="403.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+			<children>
+				<JFXButton fx:id="cancelButton" layoutX="114.0" layoutY="10.0" minWidth="65.0" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" styleClass="delete-job" text="%W09.button.cancel.text" />
+			</children>
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</padding>
+		</HBox>
+      <StackPane fx:id="cancelSpinnerPane" layoutX="20.0" layoutY="20.0" prefHeight="500.0" prefWidth="800.0" styleClass="spinnerPane" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label styleClass="spinnerText" text="%W09.cancel.msg">
+               <padding>
+                  <Insets top="130.0" />
+               </padding>
+            </Label>
+            <JFXSpinner radius="36.0" />
+         </children>
+      </StackPane>
+	</children>
+</AnchorPane>

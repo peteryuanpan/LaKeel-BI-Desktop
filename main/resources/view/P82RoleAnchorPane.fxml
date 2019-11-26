@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="500" prefWidth="800" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.tools.controller.P82RoleAnchorPane">
+	<children>
+		<fx:include source="C01ToolbarAnchorPane.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+		<SplitPane dividerPositions="0.5" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+			<items>
+            <fx:include source="C80ToolsMenuPane.fxml" />
+            <AnchorPane fx:id="anchorPane">
+               <children>
+                  <HBox layoutY="27.0" spacing="10.0" AnchorPane.topAnchor="31.0">
+                     <children>
+                        <JFXButton fx:id="getButton" layoutX="114.0" layoutY="10.0" minWidth="65.0" mnemonicParsing="false" onAction="#getFired" prefHeight="30.0" styleClass="button-pdf" stylesheets="@application.css" text="%P80.buttom.get" />
+                        <JFXButton fx:id="exportButton" layoutX="10.0" layoutY="37.0" minWidth="65.0" mnemonicParsing="false" onAction="#csvExportFired" prefHeight="30.0" styleClass="button-csv" stylesheets="@application.css" text="%P80.buttom.csv.export" />
+                        <JFXButton fx:id="importButton" layoutY="27.0" minWidth="65.0" mnemonicParsing="false" onAction="#csvImportFired" prefHeight="30.0" styleClass="button-execute" stylesheets="@application.css" text="%P80.buttom.csv.import" />
+                        <JFXButton fx:id="applyButton" layoutX="20.0" layoutY="47.0" minWidth="65.0" mnemonicParsing="false" onAction="#applyFired" prefHeight="30.0" styleClass="button-xlsx" stylesheets="@application.css" text="%P80.buttom.apply" />
+                        <JFXButton fx:id="helpButton" onAction="#csvHelpFired" prefHeight="30.0" prefWidth="47.0" text="">
+                        	<graphic>
+                            	<MaterialDesignIconView glyphName="HELP" size="1.5em" />
+                            </graphic>
+                        </JFXButton>                      
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <JFXTreeTableView fx:id="roleTable" layoutX="1.0" layoutY="59.0" prefHeight="383.0" prefWidth="547.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <columns>
+                        <JFXTreeTableColumn fx:id="roleId" prefWidth="361.0" text="%P82.table.column.roleID" />
+                        <JFXTreeTableColumn fx:id="newRoleId" prefWidth="361.0" text="%P82.table.column.newRoleID" />
+                        <JFXTreeTableColumn fx:id="organizationId" prefWidth="361.0" text="%P82.table.column.organizaiton" />
+                        <JFXTreeTableColumn fx:id="status" prefWidth="361.0" text="%P82.table.column.status" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <placeholder>
+       			     	<Label text="%P80.jfxtreetableview.placeholder.txt"/>
+   				     </placeholder>
+                  </JFXTreeTableView>
+                  <StackPane fx:id="spinnerPane" prefHeight="448.0" prefWidth="722.0" styleClass="spinnerPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label styleClass="spinnerText" text="%common.message.wait_a_moment">
+                           <padding>
+                              <Insets top="130.0" />
+                           </padding>
+                        </Label>
+                        <JFXSpinner radius="36.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

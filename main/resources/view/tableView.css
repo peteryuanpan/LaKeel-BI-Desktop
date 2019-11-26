@@ -1,0 +1,67 @@
+
+.table-view .column-header {
+	-fx-table-cell-border-color: #d9e4f1;
+	-fx-border-width: 0.1px;
+    -fx-background-color: #ffffff,-fx-table-cell-border-color;
+}
+
+.table-view .column-header.white-header {
+	-fx-table-cell-border-color: white;
+	-fx-border-width: 0.1px;
+    -fx-background-color: #ffffff,-fx-table-cell-border-color;
+}
+
+.white-header {
+	-fx-border-width: 0.0 0.0 0.0 0.0;
+}
+
+.table-row-cell:selected {
+	-fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header .label {
+	-fx-alignment: CENTER_LEFT;
+}
+
+.group-row {
+	-fx-control-inner-background: #d9e4f1;
+    -fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 1 1 0;
+    -fx-padding: 3;
+}
+
+
+.table-row-cell:even ,
+.table-row-cell:odd
+{
+    -fx-background-color: transparent;
+}
+
+.table-cell-even {
+	-fx-control-inner-background: #f4f4f4;
+	-fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 1 1 0;
+    -fx-padding: 3;
+}
+
+.table-cell-odd {
+	-fx-control-inner-background: white;
+	-fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 1 1 0;
+    -fx-padding: 3;
+}
+
+.empty-row {
+	-fx-control-inner-background: white;
+    -fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 1 1 0;
+}
+
+.group-row .text {
+	-fx-font-weight: bold;
+}
+
+.text {
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+}

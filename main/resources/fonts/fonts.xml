@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+	<fontFamily name="simhei">
+		<normal>fonts/simhei.ttf</normal>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+
+	<fontFamily name="mspgothic">
+		<normal>fonts/MSPGothic.TTF</normal>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+		<exportFonts>
+			<export key="net.sf.jasperreports.html">mspgothic</export>
+			<export key="net.sf.jasperreports.xhtml">mspgothic</export>
+		</exportFonts>
+	</fontFamily>
+
+	<fontFamily name="mspmincho">
+		<normal>fonts/MSPMincho.ttf</normal>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+</fontFamilies>

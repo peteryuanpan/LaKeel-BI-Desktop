@@ -1,0 +1,469 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#home-icon {
+    -glyph-name: "HOME";
+    -glyph-size: 3.0em;
+}
+ 
+.server{
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.8), 10.0, 0.0, 0.0, 0.0);
+    -fx-background-color: white ;
+}
+.server:hover, .button:hover {
+    -fx-background-color: lightblue ;
+}
+
+.server-status {
+    -glyph-name: "DATABASE";
+    -glyph-size: 2.0em;
+    -icons-color: yellowgreen;
+    }
+
+.server-setup {
+    -glyph-name: "SETTINGS";
+    -glyph-size: 2.0em;
+    -icons-color: gray;
+}
+
+.button-raised-blue{
+    -fx-padding: 0.7em 0.7em;
+    -jfx-button-type: FLAT;
+    -fx-background-color: rgba(63.0,81.0,181.0,1.0);
+    -fx-text-fill: WHITE;
+}
+.button-raised-red{
+    -fx-padding: 0.7em 0.7em;
+    -jfx-button-type: FLAT;
+    -fx-background-color: rgb(211.0,47.0,47.0,1.0);
+    -fx-text-fill: WHITE;
+}
+
+.button-raised-green{
+    -fx-padding: 0.7em 0.7em;
+    -jfx-button-type: FLAT;
+    -fx-background-color: rgba(139.0,195.0,74.0,1.0);
+    -fx-text-fill: WHITE;
+}
+
+.button-raised-gray{
+    -fx-padding: 0.7em 0.7em;
+    -jfx-button-type: FLAT;
+    -fx-background-color: rgba(238.0,238.0,238.0 ,1.0);
+    -fx-text-fill: BLACK;
+}
+
+.tooltip-button:hover ,.tooltip-button:pressed {
+    -fx-background-color: white;
+}
+
+.tooltip-button{
+    -fx-ripple-fill: white;
+}
+
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-padding: 1.0px;
+    -fx-effect: dropshadow(gaussian , rgba(0.0,0.0,0.0,0.8), 3.0, 0.0, 0.0, 0.0);
+   -fx-background-color: white;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: transparent;
+}
+.split-pane:horizontal > .split-pane-divider >vertical-grabber {
+   -fx-background-color: black;
+}
+.split-pane:vertical > .split-pane-divider >vertical-grabber {
+   -fx-background-color: black;
+}
+
+/* ScrollPaneの背景色を透明に設定 */
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+ 
+.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .error-label, .jfx-password-field .error-label, .jfx-text-area .error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.75em;
+}
+
+.jfx-text-field .error-icon, .jfx-password-field .error-icon, .jfx-text-area .error-icon {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+/*Material Design CSS
+ * https://www.dropbox.com/s/xdrixfgu2vqmdih/theme.css
+ */
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollBar                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.scroll-bar{
+    -fx-background-color: white;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: white;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0.0em; 
+}
+.scroll-bar:vertical .track-background,
+.scroll-bar:horizontal .track-background {
+    -fx-background-color: white;
+    -fx-background-insets:  0.0;
+    -fx-background-radius: 0.0em;
+}
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgb(205.0,205.0,205.0);
+    -fx-background-insets: 2.0 0.0 2.0 0.0;
+    -fx-background-radius: 0.0em;
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgb(205.0,205.0,205.0);
+    -fx-background-insets: 0.0 2.0 0.0 2.0;
+    -fx-background-radius: 0.0em;
+}
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgb(215.0,215.0,215.0); 
+}
+.scroll-bar:horizontal .thumb:pressed,
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgb(96.0,96.0,96.0);    
+}
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;  
+    -fx-background-radius: 0.0em;
+    -fx-padding: 5.0 5.0 5.0 5.0;
+}
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {    
+     -fx-background-color:transparent; 
+     -fx-background-radius: 0.0em;
+     -fx-padding: 5.0 5.0 5.0 5.0;    
+}
+.scroll-bar:horizontal .increment-arrow {   
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+    -fx-padding: 0.25em;
+    -fx-rotate: 90.0;
+}
+.scroll-bar:vertical .increment-arrow {
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+    -fx-padding: 0.25em;
+    -fx-rotate: 180.0;
+}
+.scroll-bar:horizontal .decrement-arrow {   
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+    -fx-padding: 0.25em;
+    -fx-rotate: -90.0;
+}
+.scroll-bar:vertical .decrement-arrow {
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+    -fx-padding: 0.25em;
+}
+.scroll-bar:vertical:focused,
+.scroll-bar:horizontal:focused {
+    -fx-background-color: -fx-box-border,-fx-box-border,white;    
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-insets: 0.0 10.0 1.0 0.0;
+}
+
+
+
+/*******************************************************************************
+ *                                                                             *
+ *TREE TABLE CSS                                                               *
+ *                                                                             *
+ ******************************************************************************/
+.tree-table-view {
+    -fx-tree-table-color: rgba(255.0, 0.0, 0.0, 0.2);
+    -fx-tree-table-rippler-color: rgba(255.0, 0.0, 0.0, 0.4);
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: -fx-tree-table-color;
+    -fx-table-cell-border-color: -fx-tree-table-color;
+    -fx-text-fill: BLACK;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell {
+    -fx-text-fill: BLACK;
+}
+
+.tree-table-view .jfx-rippler {
+    -jfx-rippler-fill: -fx-tree-table-rippler-color;
+}
+
+.tree-table-view .column-header,
+.tree-table-view .column-header-background,
+.tree-table-view .column-header-background .filler {
+    -fx-background-color: TRANSPARENT;
+}
+
+.tree-table-view .column-header {
+    -fx-border-width: 0.0 1.0 0.0 1.0;
+    -fx-border-color: #F3F3F3;
+}
+
+.tree-table-view .column-header .label {
+    -fx-text-fill: #949494;
+/*    -fx-padding: 16.0 0.0 16.0 0.0; */
+}
+
+.tree-table-view .column-header .arrow, .tree-table-view .column-header .sort-order-dot {
+    -fx-background-color: #949494;
+}
+
+.tree-table-view .column-header:last-visible {
+    -fx-border-width: 0.0 2.0 0.0 1.0;
+}
+
+.tree-table-view .column-header-background {
+    -fx-border-width: 0.0 0.0 1.0 0.0;
+    -fx-border-color: #F3F3F3;
+}
+
+.tree-table-view .tree-table-cell {
+    -fx-border-width: 0.0 0.0 0.0 0.0;
+/*    -fx-padding: 16.0 0.0 16.0 0.0; */
+}
+
+.tree-table-view .column-overlay {
+    -fx-background-color: -fx-tree-table-color;
+}
+
+.tree-table-view .column-resize-line, .tree-table-view .column-drag-header {
+    -fx-background-color: -fx-tree-table-rippler-color;
+}
+
+.tree-table-view:focused {
+    -fx-background-color: -fx-tree-table-color, -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: -1.4, 0.0, 1.0;
+    -fx-background-radius: 1.4, 0.0, 0.0;
+    /*....*/
+    -fx-padding: 1.0; /* 0.083333em; */
+}
+
+.tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: -fx-text-fill;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+
+.tree-table-row-cell .jfx-text-field {
+    -fx-focus-color: rgba(240.0, 40.0, 40.0);
+}
+
+.tree-table-row-group {
+    -fx-background-color: rgba(230.0, 230.0, 230.0);
+}
+
+.animated-option-button {
+    -fx-pref-width: 50.0px;
+    -fx-background-color: #44B449;
+    -fx-background-radius: 50.0px;
+/*    -fx-pref-height: 50px;*/
+    -fx-text-fill: white;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 50.0px;
+    -fx-border-width: 4.0px;
+}
+
+.animated-option-sub-button {
+    -fx-background-color: #43609C;
+}
+
+.animated-option-sub-button2 {
+    -fx-background-color: rgb(203.0, 104.0, 96.0);
+}
+
+.tree-table-view .menu-item:focused {
+    -fx-background-color: -fx-tree-table-color;
+
+}
+
+.tree-table-view .menu-item .label {
+    -fx-padding: 5.0 0.0 5.0 0.0;
+}
+
+
+
+/*******************************************************************************
+ *                                                                             *
+ *リポジトリ画面: P02RepoAnchorPane.fxml                                            *
+ *                                                                             *
+ ******************************************************************************/
+.repository-text{
+	-fx-font-family: "Meiryo UI";
+    -fx-font-size: 14.0px;
+}
+.spinnerPane{
+    -fx-background-color: rgb(250.0,250.0,250.0,0.6);
+}
+.spinnerText{
+    -fx-font-size: 18.0px;
+}
+.button-move{
+    -fx-background-color: rgb(117.0,117.0,117.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+.button-execute{
+    -fx-background-color: rgb(25.0,118.0,210.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+.button-csv{
+    -fx-background-color: rgb(251.0,192.0,45.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+.button-xlsx{
+    -fx-background-color: rgb(56.0,142.0,60.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+.button-pdf{
+    -fx-background-color: rgb(211.0,47.0,47.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+.button-excel{
+    -fx-background-color: rgb(156,204,101);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+.jfx-snackbar-content {
+  -fx-background-color: #323232;
+}
+.jfx-snackbar-toast {
+  -fx-text-fill: WHITE;
+}
+
+.button, .check-box {
+    -fx-cursor: hand;
+}
+
+.ng-data-source {
+    -fx-background-color: #FDC734;
+}
+
+.new-data-source {
+    -fx-background-color: #C2D69A;
+}
+
+#data-source-buttons .button {
+    -fx-text-fill: white;
+}
+
+#data-source-get-button {
+    -fx-background-color: #021F4D;
+}
+
+#data-source-import-button {
+	-fx-background-color: #021F4D;
+}
+
+#data-source-export-button {
+	-fx-background-color: #021F4D;
+}
+
+#data-source-get-button:hover {
+    -fx-background-color: navy;
+}
+
+#data-source-test-button {
+    -fx-background-color: yellowgreen;
+}
+
+#data-source-test-button:hover {
+    -fx-background-color: green;
+}
+
+#data-source-save-button {
+    -fx-background-color: #021F4D;
+}
+
+#data-source-save-button:hover {
+    -fx-background-color: navy;
+}
+
+#data-source-cancel-button {
+    -fx-background-color: rgb(100.0,100.0,100.0);
+}
+
+#data-source-cancel-button:hover {
+    -fx-background-color: rgb(50.0,50.0,50.0);
+}
+
+.wait-pane {
+    -fx-font-family: "Meiryo UI";
+    -fx-font-size: 21.0px;
+}
+
+.home-uri-label {
+    -fx-text-fill: gray ;
+}
+
+.button-paste{
+    -fx-background-color: rgb(56,142,60);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+
+.button-prev{
+    -fx-background-color: #E0E0E0;
+        -fx-text-fill: BLACK;
+    -jfx-button-type: FLAT;
+}
+.current-text{
+	-fx-font-weight: bold;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ *Excel一覧画面: W07ExcelPasteJobListAnchorPane.fxml                            *
+ *                                                                             *
+ ******************************************************************************/
+ 
+ .create-job{
+ 	-fx-background-color: rgb(41,182,246);
+ 	-fx-text-fill: WHITE;
+ }
+
+.edit-job{
+	-fx-background-color: rgb(102,187,106);
+	-fx-text-fill: WHITE;
+}
+
+.delete-job{
+	-fx-background-color: rgb(239,83,80);
+	-fx-text-fill: WHITE;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * com.legendapl.lightning.adhoc.service.AlertWindowService.java               *
+ *                                                                             *
+ ******************************************************************************/
+
+.alert-window-text{
+	-fx-background-color: transparent;
+    -fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+ 

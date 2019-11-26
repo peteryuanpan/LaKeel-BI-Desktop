@@ -1,0 +1,29 @@
+.button-doTopic {
+    -fx-background-color: rgb(211.0,47.0,47.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+
+.button-doAdhoc {
+    -fx-background-color: rgb(211.0,47.0,47.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+
+.button-doDelete {
+    -fx-background-color: rgb(25.0,118.0,210.0);
+    -fx-text-fill: WHITE;
+    -jfx-button-type: FLAT;
+}
+
+.button-topic-save {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: BLACK;
+    -jfx-button-type: FLAT;
+}
+
+.button-topic-cancel {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: BLACK;
+    -jfx-button-type: FLAT;
+}

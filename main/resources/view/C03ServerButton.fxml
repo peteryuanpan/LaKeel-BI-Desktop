@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tooltip?>
+
+
+<fx:root maxHeight="150.0" maxWidth="200.0" onMouseClicked="#serverSelected"
+	prefHeight="150.0" prefWidth="200.0" styleClass="server"
+	type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<VBox>
+			<children>
+				<Label fx:id="serverName" maxWidth="150.0" translateZ="1.0">
+					<padding>
+						<Insets bottom="5.0" left="15.0" right="15.0" top="15.0" />
+					</padding>
+				</Label>
+				<Label fx:id="address" maxWidth="150.0" translateZ="1.0">
+					<padding>
+						<Insets bottom="10.0" left="20.0" right="10.0" top="5.0" />
+					</padding>
+				</Label>
+			</children>
+		</VBox>
+		<HBox prefHeight="35.0" prefWidth="80.0" AnchorPane.bottomAnchor="5.0"
+			AnchorPane.rightAnchor="5.0">
+			<children>
+				<JFXButton fx:id="dataBaseButton" focusTraversable="false"
+					mnemonicParsing="false" onMouseClicked="#setupDataSource"
+					prefHeight="32.0" prefWidth="32.0">
+					<graphic>
+						<MaterialDesignIconView fx:id="dataBaseIcon"
+							fill="yellowgreen" glyphName="DATABASE" size="2.0em" />
+					</graphic>
+					<tooltip>
+						<Tooltip id="dataBaseButtonTooltip" text="%C03.tooltip.data_base">
+						</Tooltip>
+					</tooltip>
+				</JFXButton>
+				<JFXButton fx:id="settingButton" focusTraversable="false"
+					layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
+					onMouseClicked="#setupServer" prefHeight="30.0" prefWidth="34.0">
+					<graphic>
+						<MaterialDesignIconView fill="gray"
+							glyphName="SETTINGS" size="2.0em" />
+					</graphic>
+					<tooltip>
+						<Tooltip id="settingButtonTooltip" text="%C03.tooltip.server_setting">
+						</Tooltip>
+					</tooltip>
+				</JFXButton>
+			</children>
+		</HBox>
+	</children>
+	<cursor>
+		<Cursor fx:constant="HAND" />
+	</cursor>
+</fx:root>

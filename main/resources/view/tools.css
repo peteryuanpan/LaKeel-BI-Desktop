@@ -1,0 +1,65 @@
+.tools-table-row-cell-delete {
+	-fx-text-fill: black;
+	-fx-background-color: #E6B6B8;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-row-cell-add {
+	-fx-text-fill: black;
+	-fx-background-color: #B8CCE4;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-row-cell-update {
+	-fx-text-fill: black;
+	-fx-background-color: #C2D69A;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-row-cell {
+	-fx-text-fill: black;
+	-fx-background-color: white;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-cell-delete {
+	-fx-text-fill: black;
+	-fx-background-color: #E6B6B8;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-cell-add {
+	-fx-text-fill: black;
+	-fx-background-color: #B8CCE4;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-cell-update {
+	-fx-text-fill: black;
+	-fx-background-color: #C2D69A;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.tools-table-cell {
+	-fx-text-fill: black;
+	-fx-background-color: white;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+

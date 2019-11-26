@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500" prefWidth="800" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.adhoc.controller.P113TopicDisplayAnchorPane">
+	<children>
+		<SplitPane dividerPositions="0.5" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<items>
+			<fx:include source="C110TopicMenuPane.fxml" />
+			<AnchorPane>
+				<children>
+					<VBox AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+						<Label prefHeight="40.0" prefWidth="450.0" text="%P113.window.title1" />
+						<Label prefHeight="40.0" prefWidth="586.0" text="%P113.window.title2" />
+					</VBox>
+					<AnchorPane layoutX="-10.0" layoutY="150.0" minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="580.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="100.0">
+						<children>
+							<TreeTableView fx:id="dataTable" layoutX="7.0" layoutY="7.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="7.0">
+							   <columns>
+								  <TreeTableColumn fx:id="srLabel" prefWidth="150.0" text="%P113.table.column.source" />
+								  <TreeTableColumn fx:id="tgLabel" prefWidth="150.0" text="%P113.table.column.display" />
+							   </columns>
+							   <columnResizePolicy>
+								  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+							   </columnResizePolicy>
+							   <placeholder>
+									<Label text="%P100.TreeTableView.placeholder.txt" />
+							   </placeholder>
+							</TreeTableView>
+						</children>
+					</AnchorPane>
+					<VBox layoutX="530.0" layoutY="200.0" prefHeight="140.0" prefWidth="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+						<JFXButton fx:id="moveFirstButton" onAction="#moveFirst" styleClass="button" stylesheets="@adhocMain.css">
+						  <graphic>
+							<MaterialDesignIconView glyphName="CHEVRON_DOUBLE_UP" size="2em" />
+						  </graphic>
+						</JFXButton>
+						<JFXButton fx:id="movePreviousButton" onAction="#movePrevious" styleClass="button" stylesheets="@adhocMain.css">
+						  <graphic>
+							<MaterialDesignIconView glyphName="CHEVRON_UP" size="2em" />
+						  </graphic>
+						</JFXButton>
+						<JFXButton fx:id="moveNextButton" onAction="#moveNext" styleClass="button" stylesheets="@adhocMain.css">
+						  <graphic>
+							<MaterialDesignIconView glyphName="CHEVRON_DOWN" size="2em" />
+						  </graphic>
+						</JFXButton>
+						<JFXButton fx:id="moveLastButton" onAction="#moveLast" styleClass="button" stylesheets="@adhocMain.css">
+						  <graphic>
+							<MaterialDesignIconView glyphName="CHEVRON_DOUBLE_DOWN" size="2em" />
+						  </graphic>
+						</JFXButton>
+					</VBox>
+	                <JFXButton fx:id="save" layoutX="490.0" layoutY="455.0" onAction="#save" styleClass="button-topic-save" stylesheets="@adhocMain.css" text="%P110.button.save" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="45.0" />
+	                <JFXButton fx:id="cancel" layoutX="424.0" layoutY="455.0" onAction="#cancel" styleClass="button-topic-cancel" stylesheets="@adhocMain.css" text="%P110.button.cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="130.0" />
+				</children>
+			</AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

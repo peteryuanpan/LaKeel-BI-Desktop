@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import net.jonathangiles.hacking.tableview.cellSpan.CellSpanTableView?>
+<?import org.controlsfx.control.PrefixSelectionComboBox?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane prefHeight="500" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.adhoc.controller.P121AdhocAnchorPane">
+  <children>
+    <AnchorPane layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <SplitPane fx:id="mainSplitPane" dividerPositions="0.2599784250269687, 0.7680690399137001" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <items>
+            <AnchorPane fx:id="leftPane" minWidth="240.0">
+              <children>
+                <SplitPane fx:id="spilitPane" dividerPositions="0.65" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                    <AnchorPane fx:id="fieldPane">
+                      <children>
+                        <VBox prefHeight="448.0" stylesheets="@adhocView.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                            <HBox fx:id="domainHBox" alignment="CENTER_LEFT" minHeight="30.0" prefHeight="30.0">
+                              <children>
+                                <Button fx:id="domainReduceButton" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                                  <graphic>
+                                    <FontAwesomeIconView glyphName="MINUS" size="10" />
+                                  </graphic>
+                                </Button>
+                                <Label fx:id="topicNameLabel" text="TODO" HBox.hgrow="ALWAYS" />
+                                <Region HBox.hgrow="SOMETIMES" />
+                                <Button fx:id="domainExpandButton" maxWidth="33.0" minWidth="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                                  <graphic>
+                                    <FontAwesomeIconView glyphName="LIST" size="13" />
+                                  </graphic>
+                                </Button>
+                              </children>
+                            </HBox>
+                            <HBox fx:id="fieldHBox" alignment="CENTER_LEFT" minHeight="30.0" prefHeight="30.0" style="-fx-background-color: #dbe4f1;">
+                              <children>
+                                <Label fx:id="fieldNameLabel" text="%P121.fieldNameLabel.text" HBox.hgrow="ALWAYS">
+                                  <HBox.margin>
+                                    <Insets left="28.0" />
+                                  </HBox.margin>
+                                </Label>
+                                <Region HBox.hgrow="SOMETIMES" />
+                                <Button fx:id="fieldExpandButton" onAction="#handleActionClickedFieldExpandButton" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                                  <graphic>
+                                    <FontAwesomeIconView glyphName="LIST" size="13" />
+                                  </graphic>
+                                </Button>
+                              </children>
+                            </HBox>
+                            <CustomTextField fx:id="fieldSearchField" minHeight="30.0" prefHeight="30.0" styleClass="searchField">
+                              <right>
+                                <Label styleClass="searchBox-label">
+                                  <graphic>
+                                    <FontAwesomeIconView styleClass="searchBox-label-icon" />
+                                  </graphic>
+                                </Label>
+                              </right>
+                            </CustomTextField>
+                            <TreeView fx:id="fieldTreeView" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="valuePane">
+                      <children>
+                        <VBox stylesheets="@adhocView.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                            <HBox fx:id="valueHBox" alignment="CENTER_LEFT" minHeight="30.0" prefHeight="30.0" style="-fx-background-color: #d9cce9;">
+                              <children>
+                                <Label fx:id="valueNameLabel" text="%P121.valueNameLabel.text" HBox.hgrow="ALWAYS">
+                                  <HBox.margin>
+                                    <Insets left="28.0" />
+                                  </HBox.margin>
+                                </Label>
+                                <Region HBox.hgrow="SOMETIMES" />
+                                <Button fx:id="valueExpandButton" onAction="#handleActionClickedValueExpandButton" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                                  <graphic>
+                                    <FontAwesomeIconView glyphName="LIST" size="13" />
+                                  </graphic>
+                                </Button>
+                              </children>
+                            </HBox>
+                            <CustomTextField fx:id="valueSearchField" minHeight="30.0" prefHeight="30.0" styleClass="searchField">
+                              <right>
+                                <Label styleClass="searchBox-label">
+                                  <graphic>
+                                    <FontAwesomeIconView styleClass="searchBox-label-icon" />
+                                  </graphic>
+                                </Label>
+                              </right>
+                            </CustomTextField>
+                            <TreeView fx:id="valueTreeView" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainPane">
+              <children>
+                <VBox fx:id="mainVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <HBox fx:id="mainFirstHBox" alignment="CENTER_LEFT" styleClass="border" stylesheets="@adhocView.css" VBox.vgrow="NEVER">
+                      <children>
+                        <Label fx:id="adhocNameLabel" text="TODO" />
+                      </children>
+                    </HBox>
+                    <HBox fx:id="mainSecondHBox" styleClass="border">
+                      <children>
+                        <ToolBar fx:id="toolBar" minHeight="30.0" prefHeight="30.0" stylesheets="@adhocView.css" HBox.hgrow="NEVER">
+                          <items>
+                            <MenuButton fx:id="saveButton" styleClass="save-button" stylesheets="@adhocView.css">
+                              <graphic>
+                                <FontAwesomeIconView glyphName="SAVE" size="20" />
+                              </graphic>
+                            </MenuButton>
+                            <MenuButton fx:id="exportButton" styleClass="export-button" stylesheets="@adhocView.css">
+                              <graphic>
+                                <FontAwesomeIconView glyphName="SIGN_OUT" size="20" />
+                              </graphic>
+                            </MenuButton>
+                            <Button fx:id="lastStepButton" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                              <graphic>
+                                <FontAwesomeIconView glyphName="REPLY" size="13" />
+                              </graphic>
+                            </Button>
+                            <Button fx:id="nextStepButton" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                              <graphic>
+                                <FontAwesomeIconView glyphName="SHARE" size="13" />
+                              </graphic>
+                            </Button>
+                            <Button fx:id="firstStepButton" style="-fx-background-color: transparent;" styleClass="base-button" text="" HBox.hgrow="NEVER">
+                              <graphic>
+                                <MaterialDesignIconView glyphName="REPLAY" size="20" />
+                              </graphic>
+                            </Button>
+                            <Button fx:id="switchButton" onAction="#handleActionClickedSwitchButton" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                              <graphic>
+                                <MaterialDesignIconView glyphName="ROTATE_LEFT_VARIANT" size="20" />
+                              </graphic>
+                            </Button>
+                            <Button fx:id="sortButton" onAction="#handleActionClickedSortButton" style="-fx-background-color: transparent;" text="" HBox.hgrow="NEVER">
+                              <graphic>
+                                <FontAwesomeIconView glyphName="SORT_ALPHA_ASC" size="20" />
+                              </graphic>
+                            </Button>
+                            <Button fx:id="sqlButton" onAction="#handleActionClickedSqlButton" style="-fx-background-color: transparent;" styleClass="base-button" text="" HBox.hgrow="NEVER">
+                              <graphic>
+                                <FontAwesomeIconView glyphName="TASKS" size="20" />
+                              </graphic>
+                            </Button>
+                            <PrefixSelectionComboBox fx:id="viewComboBox" minHeight="23.0" style="-fx-background-color: white; -fx-border-color: black;">
+                              <padding>
+                                <Insets bottom="3.0" />
+                              </padding>
+                            </PrefixSelectionComboBox>
+                            <PrefixSelectionComboBox fx:id="dataComboBox" minHeight="23.0" style="-fx-background-color: white; -fx-border-color: black;">
+                              <padding>
+                                <Insets bottom="3.0" />
+                              </padding>
+                            </PrefixSelectionComboBox>
+                          </items>
+                        </ToolBar>
+                      </children>
+                    </HBox>
+                    <HBox fx:id="mainThirdHBox" alignment="CENTER_LEFT" styleClass="column-row-container" stylesheets="@adhocView.css" VBox.vgrow="NEVER">
+                      <children>
+                        <Label fx:id="columnLabel" stylesheets="@adhocView.css" />
+                                    <FlowPane fx:id="columnFlow" styleClass="layout-flow-pane" stylesheets="@adhocView.css" />
+                      </children>
+                    </HBox>
+                    <HBox fx:id="mainFourthHBox" alignment="CENTER_LEFT" styleClass="column-row-container" stylesheets="@adhocView.css" VBox.vgrow="NEVER">
+                      <children>
+                        <Label fx:id="rowLabel" stylesheets="@adhocView.css" />
+                                    <FlowPane fx:id="rowFlow" styleClass="layout-flow-pane" stylesheets="@adhocView.css" />
+                      </children>
+                    </HBox>
+                    <HBox fx:id="mainFifthHBox" alignment="CENTER_RIGHT" styleClass="column-row-container" stylesheets="@adhocView.css">
+                      <children>
+                        <Button fx:id="submitButton" onAction="#generateDataView" style="-fx-background-color: #d9cce9;" text="%P121.button.apply">
+                          <padding>
+                            <Insets bottom="3.0" left="10.0" right="10.0" top="3.0" />
+                          </padding>
+                          <HBox.margin>
+                            <Insets right="10.0" />
+                          </HBox.margin>
+                        </Button>
+                      </children>
+                    </HBox>
+                    <AnchorPane fx:id="tablePane" style="-fx-background-color: white;">
+                      <children>
+                        <VBox fx:id="tableVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                            <HBox fx:id="tableHBox">
+                              <children>
+                                <CellSpanTableView fx:id="tableView" />
+                                <Region fx:id="tableRegion" style="-fx-background-color: white;" />
+                              </children>
+                            </HBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                </VBox>
+              </children>
+            </AnchorPane>
+                  <AnchorPane fx:id="rightFilterAnchor" maxWidth="450.0" minWidth="214.0" prefHeight="498.0" prefWidth="214.0">
+                     <children>
+                        <VBox prefHeight="498.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="0.0" prefWidth="214.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" minHeight="33.0" prefHeight="33.0" prefWidth="274.0" styleClass="border" stylesheets="@adhocView.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <CheckBox fx:id="filterCheck" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="30.0" textAlignment="CENTER" HBox.hgrow="NEVER" />
+                                          <Label text="%P121.filter.title" HBox.hgrow="ALWAYS" />
+                                          <Region prefHeight="23.0" prefWidth="61.0" HBox.hgrow="SOMETIMES" />
+                                          <Button fx:id="filterReduceButton" alignment="CENTER" maxWidth="33.0" minWidth="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text=" " textAlignment="CENTER" HBox.hgrow="NEVER">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="LIST" size="13" text="" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="rightPane" prefHeight="397.0" prefWidth="214.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ListView fx:id="filterView" layoutX="-21.0" layoutY="38.0" prefHeight="435.0" prefWidth="214.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <stylesheets>
+                                          <URL value="@ListView.css" />
+                                          <URL value="@ListView.css" />
+                                       </stylesheets></ListView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="102.0" prefWidth="214.0" VBox.vgrow="SOMETIMES">
+                                 <children>
+                                  <TitledPane fx:id="filterTitled" alignment="TOP_LEFT" animated="false" layoutY="104.0" prefHeight="135.0" prefWidth="304.0" text="%P121.custmerFilter.title" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <VBox prefHeight="105.0" prefWidth="125.0">
+                                             <children>
+                                                <Label prefHeight="44.0" prefWidth="190.0" text="例：A or (B and C)" VBox.vgrow="NEVER" />
+                                                <TextArea fx:id="filterText" prefHeight="45.0" prefWidth="263.0" VBox.vgrow="SOMETIMES" />
+                                                <Label fx:id="filterError" prefHeight="19.0" prefWidth="332.0" VBox.vgrow="SOMETIMES" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                              </AnchorPane>
+                           </children></VBox>
+                     </children>
+                  </AnchorPane>
+          </items>
+        </SplitPane>
+      </children>
+    </AnchorPane>
+    <StackPane fx:id="spinnerPane" layoutX="10.0" layoutY="10.0" styleClass="spinnerPane" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label styleClass="spinnerText" text="%common.message.wait_a_moment">
+          <padding>
+            <Insets top="130.0" />
+          </padding>
+        </Label>
+        <JFXSpinner radius="36.0" />
+      </children>
+    </StackPane>
+  </children>
+</AnchorPane>

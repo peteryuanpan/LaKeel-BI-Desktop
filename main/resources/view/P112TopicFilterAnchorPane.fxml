@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500" prefWidth="800" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.adhoc.controller.P112TopicFilterAnchorPane">
+	<children>
+		<SplitPane dividerPositions="0.5" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<items>
+            <fx:include source="C110TopicMenuPane.fxml" />
+            <AnchorPane>
+               <children>
+                  <VBox AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label prefHeight="40.0" text="%P112.window.title1" />
+                        <Label prefHeight="40.0" text="%P112.window.title2" />
+                     </children>
+                  </VBox>
+                  <AnchorPane AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.2387312186978297" prefHeight="498.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox fx:id="leftVBox" prefHeight="326.0" prefWidth="137.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label fx:id="leftLabel" text="%P112.field.title" />
+                                          <JFXTreeView fx:id="treeView" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="rightEntirePane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane fx:id="resizePane" minHeight="0.0" minWidth="0.0">
+                                             <children>
+                                                <VBox fx:id="filterEditVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Label fx:id="rightLabel" text="%P112.filter.title" />
+                                                      <BorderPane fx:id="filterEditPane">
+                                                         <bottom>
+                                                            <HBox fx:id="bottom" alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <JFXButton fx:id="OKButton" prefHeight="29.0" prefWidth="77.0" text="%P110.button.save" />
+                                                                  <JFXButton fx:id="cancelButton" prefHeight="29.0" prefWidth="91.0" text="%P110.button.cancel" />
+                                                                  <CheckBox fx:id="checkBox" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="%P112.filter.locked">
+                                                                     <HBox.margin>
+                                                                        <Insets left="150.0" />
+                                                                     </HBox.margin>
+                                                                  </CheckBox>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="15.0" left="15.0" top="30.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </bottom>
+                                                         <left>
+                                                            <HBox fx:id="left" spacing="15.0" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <Label fx:id="label" prefHeight="30.0" prefWidth="50.0" text="Label" />
+                                                                  <ChoiceBox fx:id="choiceBox" prefHeight="30.0" prefWidth="146.0" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <BorderPane.margin>
+                                                                  <Insets left="15.0" right="15.0" top="15.0" />
+                                                               </BorderPane.margin>
+                                                            </HBox>
+                                                         </left>
+                                                         <center>
+                                                            <AnchorPane fx:id="editorPane" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets right="15.0" top="15.0" />
+                                                               </BorderPane.margin>
+                                                            </AnchorPane>
+                                                         </center>
+                                                      </BorderPane>
+                                                      <TableView fx:id="tableView" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="save" layoutX="490.0" layoutY="455.0" onAction="#save" styleClass="button-topic-save" stylesheets="@adhocMain.css" text="%P110.button.save" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="45.0" />
+                  <JFXButton fx:id="cancel" layoutX="424.0" layoutY="455.0" onAction="#cancel" styleClass="button-topic-cancel" stylesheets="@adhocMain.css" text="%P110.button.cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="130.0" />
+               </children>
+            </AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

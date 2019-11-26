@@ -1,0 +1,97 @@
+
+.top-border {
+	-fx-border-width: 1.0 1.0 0.0 0.0;
+	-fx-border-color: #f4f4f4 #f4f4f4 #f4f4f4 #f4f4f4;
+}
+
+.right-border {
+	-fx-border-width: 0.0 1.0 0.0 0.0;
+	-fx-border-color: #f4f4f4 #f4f4f4 #f4f4f4 #f4f4f4;
+}
+
+/*
+.bottom-border {
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+	-fx-border-color: #f4f4f4 #f4f4f4 #f4f4f4 #f4f4f4;
+}
+
+.left-border {
+	-fx-border-width: 0.0 0.0 0.0 1.0;
+	-fx-border-color: #f4f4f4 #f4f4f4 #f4f4f4 #f4f4f4;
+}
+*/
+
+.bold-font {
+	-fx-font-weight: bold;
+}
+
+.column-header.blue-background,
+.column-header.row-column {
+	-fx-table-cell-border-color: #d9e4f1;
+	-fx-border-width: 0.1px;
+    -fx-background-color: #ffffff,-fx-table-cell-border-color;
+}
+
+.column-header.gray-background {
+	-fx-table-cell-border-color: #f4f4f4;
+	-fx-border-width: 0.1px;
+    -fx-background-color: #ffffff,-fx-table-cell-border-color;
+}
+
+.column-header.gray-background .text {
+	-fx-fill: #f4f4f4;
+}
+
+.column-header.label-column {
+	-fx-table-cell-border-color: white;
+	-fx-border-width: 0.1px;
+    -fx-background-color: #ffffff,-fx-table-cell-border-color;
+}
+
+.column-header.row-column .label {
+	-fx-alignment: CENTER_LEFT;
+}
+
+.column-header.label-column .label{
+	-fx-alignment: CENTER_RIGHT;
+}
+
+.table-row-cell:even ,
+.table-row-cell:odd {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: black;
+}
+
+.table-row-cell:selected {
+	-fx-table-cell-border-color: #ededed;
+}
+
+.table-cell-even {
+	-fx-control-inner-background: #f4f4f4;
+	-fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 1 1 0;
+    -fx-padding: 3;
+}
+
+.table-cell-odd {
+	-fx-control-inner-background: white;
+	-fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 1 1 0;
+    -fx-padding: 3;
+}
+
+.row-group {
+	-fx-font-weight: bold;
+	-fx-text-fill: black;
+	-fx-background-color: #cccccc;
+}
+
+.text {
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+    -fx-fill: black;
+}
+

@@ -1,0 +1,116 @@
+.searchBox-label {
+	-fx-padding: 0 2 0 7;
+}
+
+.searchBox-label-icon {
+	-glyph-size: 13;
+	-glyph-name: SEARCH;
+}
+
+.tool-bar {
+	-fx-background-color: #f4f4f4;
+}
+
+.border {
+	-fx-border-width: 0.0 0.0 2.0 0.0;
+	-fx-border-color: white white white white;
+}
+
+.column-row-container {
+	-fx-background-color: white;
+}
+
+.label {
+	-fx-padding: 5;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+}
+
+.button {
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+}
+
+.title-label {
+	-fx-padding: 5;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 18;
+}
+
+.base-button {
+	-fx-border-width: 0.0 2.0 0.0 0.0;
+	-fx-border-color: white transparent white transparent;
+}
+
+.save-button {
+	-fx-background-color: #f4f4f4;
+	-fx-border-color: white transparent white transparent;
+}
+
+.save-button-menuItem .label {
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+    -fx-alignment: center;
+    -fx-pref-height: 15;
+    -fx-padding: -20 0 -20 0;
+}
+
+.export-button {
+	-fx-background-color: #f4f4f4;
+	-fx-border-color: white transparent white transparent;
+}
+
+.export-button-menuItem .label {
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+    -fx-alignment: center;
+    -fx-pref-height: 15;
+    -fx-padding: -20 0 -20 0;
+}
+
+.ComboBoxButtonCell .label {
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+}
+
+.layout-flow-pane {
+	-fx-hgap: 7;
+	-fx-vgap: 4;
+	-fx-alignment: TOP_LEFT;
+	-fx-padding: 4 4 4 4;
+	-fx-background-color: transparent;
+	-fx-border-width: 1;
+	-fx-border-insets: 3;
+	-fx-border-radius: 3;
+	-fx-border-color: rgb(215.0,215.0,215.0);
+}
+
+.layout-flow-pane-child-field-label {
+	-fx-graphic-text-gap: 6;
+	-fx-padding: -1 4 -1 7;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+	-fx-background-color: #dbe4f1;
+}
+
+.layout-flow-pane-child-measure-label {
+	-fx-graphic-text-gap: 6;
+	-fx-padding: -1 4 -1 7;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+	-fx-background-color: #d9cce9;
+}
+
+.layout-flow-pane-child-icon-pound-label {
+	-fx-graphic-text-gap: 0;
+	-fx-font-family: Meiryo;
+    -fx-font-size: 12;
+    -fx-background-color: transparent;
+}
+
+.layout-flow-pane-child-grid-pane {
+	-fx-background-color: #e9e3f7;
+	-fx-border-color: transparent;
+	-fx-padding: 0.5 2 0.5 2;
+}
+

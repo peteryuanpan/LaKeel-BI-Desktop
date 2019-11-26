@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.ListSelectionView?>
+
+<AnchorPane prefHeight="500" prefWidth="800" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.adhoc.controller.P111TopicSelectAnchorPane">
+	<children>
+		<SplitPane dividerPositions="0.5" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<items>
+            <fx:include source="C110TopicMenuPane.fxml" />
+            <AnchorPane>
+           		<children>
+					<VBox prefHeight="66.0" prefWidth="800.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     	<Label prefHeight="33.0" prefWidth="800.0" text="%P111.window.title1" />
+						<Label prefHeight="33.0" prefWidth="800.0" text="%P111.window.title2" />
+					</VBox>
+					<ListSelectionView fx:id="selectBox" prefHeight="350.0" prefWidth="580.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+           			<JFXButton fx:id="save" layoutX="490.0" layoutY="455.0" onAction="#save" styleClass="button-topic-save" stylesheets="@adhocMain.css" text="%P110.button.save" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="45.0" />
+	                <JFXButton fx:id="cancel" layoutX="424.0" layoutY="455.0" onAction="#cancel" styleClass="button-topic-cancel" stylesheets="@adhocMain.css" text="%P110.button.cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="130.0" />
+           		</children>
+            </AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

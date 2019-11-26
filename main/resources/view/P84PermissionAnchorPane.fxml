@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="500" prefWidth="800" styleClass="repository-text" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.tools.controller.P84PermissionAnchorPane">
+	<children>
+		<fx:include source="C01ToolbarAnchorPane.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+		<SplitPane dividerPositions="0.5" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+			<items>
+            <fx:include source="C80ToolsMenuPane.fxml" />
+            <AnchorPane fx:id="anchorPane">
+               <children>
+                  <HBox layoutX="565.0" layoutY="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="195.0" text="%P84.view.inherit" />
+                        <JFXToggleButton fx:id="toggleInherit" onAction="#changeInherit" prefHeight="58.0" prefWidth="58.0" text=" " />
+                        <Label alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="86.0" text="%P84.view.notInherit" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="555.0" layoutY="-4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="75.0" text="%P84.view.role" />
+                        <JFXToggleButton fx:id="toggle" onAction="#changeView" prefHeight="58.0" prefWidth="58.0" text=" " />
+                        <Label alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="86.0" text="%P84.view.user" />
+                     </children>
+                  </HBox>
+                  <HBox layoutY="27.0" spacing="10.0" AnchorPane.topAnchor="31.0">
+                     <children>
+                        <JFXButton fx:id="getButton" layoutX="114.0" layoutY="10.0" minWidth="65.0" mnemonicParsing="false" onAction="#getFired" prefHeight="30.0" styleClass="button-pdf" stylesheets="@application.css" text="%P80.buttom.get" />                     
+                        <JFXButton fx:id="exportButton" layoutX="10.0" layoutY="37.0" minWidth="65.0" mnemonicParsing="false" onAction="#csvExportFired" prefHeight="30.0" styleClass="button-csv" stylesheets="@application.css" text="%P80.buttom.csv.export" />       
+                        <JFXButton fx:id="importButton" layoutY="27.0" minWidth="65.0" mnemonicParsing="false" onAction="#csvImportFired" prefHeight="30.0" styleClass="button-execute" stylesheets="@application.css" text="%P80.buttom.csv.import" />
+                        <JFXButton fx:id="applyButton" layoutX="20.0" layoutY="47.0" minWidth="65.0" mnemonicParsing="false" onAction="#applyFired" prefHeight="30.0" styleClass="button-xlsx" stylesheets="@application.css" text="%P80.buttom.apply" />
+                        <JFXButton fx:id="helpButton" onAction="#csvHelpFired" prefHeight="30.0" prefWidth="47.0" text="">
+                        	<graphic>
+                            	<MaterialDesignIconView glyphName="HELP" size="1.5em" />
+                            </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <SplitPane dividerPositions="0.3633841886269071" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="376.0" prefWidth="348.0">
+                           <children>
+                              <HBox prefHeight="18.0" prefWidth="261.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="76.0" text="%P84.button.folder" />
+                                    <JFXButton fx:id="refresh" onAction="#refresh" prefHeight="45.0" prefWidth="47.0" text=" ">
+                                       <graphic>
+                                          <MaterialDesignIconView glyphName="REFRESH" size="1.5em" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <JFXTreeView fx:id="folderTree" layoutY="29.0" prefHeight="347.0" prefWidth="261.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <JFXTreeTableView fx:id="permissionTable" prefHeight="376.0" prefWidth="505.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <JFXTreeTableColumn fx:id="roleName" prefWidth="150.0" text="%P84.table.column.rolename" />
+                                    <JFXTreeTableColumn fx:id="permission" prefWidth="150.0" text="%P84.table.column.permission" />
+                                    <JFXTreeTableColumn fx:id="organization" prefWidth="150.0" text="%P84.table.column.organization" />
+                                    <JFXTreeTableColumn fx:id="status" prefWidth="150.0" text="%P82.table.column.status" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <placeholder>
+       			     				<Label text="%P80.jfxtreetableview.placeholder.txt" />
+   				    			 </placeholder>
+                              </JFXTreeTableView>
+                              <JFXTreeTableView fx:id="permissionTable1" prefHeight="376.0" prefWidth="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <JFXTreeTableColumn fx:id="userName" prefWidth="150.0" text="%P84.table.column.username" />
+                                    <JFXTreeTableColumn fx:id="permission1" prefWidth="150.0" text="%P84.table.column.permission" />
+                                    <JFXTreeTableColumn fx:id="organization1" prefWidth="150.0" text="%P84.table.column.organization" />
+                                    <JFXTreeTableColumn fx:id="status1" prefWidth="150.0" text="%P82.table.column.status" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <placeholder>
+       			     				<Label text="%P80.jfxtreetableview.placeholder.txt" />
+   				    			 </placeholder>
+                              </JFXTreeTableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <JFXTextField fx:id="dirPath" layoutX="251.0" layoutY="3.0" prefHeight="27.0" prefWidth="261.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="5.0" />
+                  <StackPane fx:id="spinnerPane" prefHeight="448.0" prefWidth="722.0" styleClass="spinnerPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label styleClass="spinnerText" text="%common.message.wait_a_moment">
+                           <padding>
+                              <Insets top="130.0" />
+                           </padding>
+                        </Label>
+                        <JFXSpinner radius="36.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

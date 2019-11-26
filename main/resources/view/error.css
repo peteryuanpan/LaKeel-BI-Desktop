@@ -1,0 +1,12 @@
+.tools-alert-text-font{
+	-fx-background-color: transparent;
+    -fx-font-family: Meiryo;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.report-error-text-font{
+    -fx-font-family: Meiryo;
+    -fx-font-size: 13;
+    -fx-font-weight: 600;
+}

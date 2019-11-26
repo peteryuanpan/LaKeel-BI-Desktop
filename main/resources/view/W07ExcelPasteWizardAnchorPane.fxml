@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.ListSelectionView?>
+
+<AnchorPane fx:id="anchorPane" minHeight="500.0" minWidth="800.0" prefHeight="500" prefWidth="800" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.controller.W07ExcelPasteWizardController">  
+  <children> 
+    <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0"> 
+      <children> 
+        <StackPane fx:id="flowStackPane" maxWidth="200.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0" StackPane.alignment="CENTER_LEFT"> 
+          <StackPane.margin> 
+            <Insets /> 
+          </StackPane.margin>  
+          <children> 
+            <Separator orientation="VERTICAL" prefHeight="200.0" StackPane.alignment="CENTER_RIGHT"> 
+              <StackPane.margin> 
+                <Insets right="10.0" /> 
+              </StackPane.margin> 
+            </Separator>  
+            <VBox fx:id="stageVBox" prefHeight="440.0" prefWidth="446.0" StackPane.alignment="CENTER"> 
+              <children> 
+                <HBox prefHeight="50.0" prefWidth="200.0"> 
+                  <children> 
+                    <MaterialDesignIconView fill="#7f7cd3" glyphName="FILE_DOCUMENT" size="2.0em"> 
+                      <HBox.margin> 
+                        <Insets /> 
+                      </HBox.margin> 
+                    </MaterialDesignIconView>  
+                    <Label text="%W07.flow.text1"> 
+                      <font> 
+                        <Font name="Meiryo UI" size="14.0" /> 
+                      </font>  
+                      <HBox.margin> 
+                        <Insets left="10.0" /> 
+                      </HBox.margin> 
+                    </Label> 
+                  </children>  
+                  <VBox.margin> 
+                    <Insets top="50.0" /> 
+                  </VBox.margin> 
+                </HBox>  
+                <HBox prefHeight="50.0" prefWidth="200.0"> 
+                  <children> 
+                    <MaterialDesignIconView fill="#74ae74" glyphName="GRID" size="2.0em" />  
+                    <Label text="%W07.flow.text2"> 
+                      <font> 
+                        <Font name="Meiryo UI" size="14.0" /> 
+                      </font>  
+                      <HBox.margin> 
+                        <Insets left="10.0" /> 
+                      </HBox.margin> 
+                    </Label> 
+                  </children> 
+                </HBox>  
+                <HBox prefHeight="50.0" prefWidth="200.0"> 
+                  <children> 
+                    <MaterialDesignIconView fill="#a8813f" glyphName="TABLE_COLUMN_WIDTH" size="2.0em" />  
+                    <Label text="%W07.flow.text3"> 
+                      <font> 
+                        <Font name="Meiryo UI" size="14.0" /> 
+                      </font>  
+                      <HBox.margin> 
+                        <Insets left="10.0" /> 
+                      </HBox.margin> 
+                    </Label> 
+                  </children> 
+                </HBox>  
+                <HBox prefHeight="50.0" prefWidth="200.0"> 
+                  <children> 
+                    <MaterialDesignIconView fill="#6f6f6f" glyphName="DOWNLOAD" size="2.0em" />  
+                    <Label text="%W07.flow.text4"> 
+                      <font> 
+                        <Font name="Meiryo UI" size="14.0" /> 
+                      </font>  
+                      <HBox.margin> 
+                        <Insets left="10.0" /> 
+                      </HBox.margin> 
+                    </Label> 
+                  </children> 
+                </HBox> 
+              </children> 
+            </VBox>  
+            <JFXButton fx:id="cancelAndMoveButton" onAction="#cancelAndMoveToHome" prefHeight="30.0" prefWidth="100.0" styleClass="button-prev" text="%common.button.cancel" StackPane.alignment="BOTTOM_LEFT"> 
+              <StackPane.margin> 
+                <Insets left="5.0" /> 
+              </StackPane.margin> 
+            </JFXButton> 
+          </children> 
+        </StackPane>  
+        <StackPane fx:id="reportSelectStackPane" prefHeight="150.0" prefWidth="200.0"> 
+          <children> 
+            <MaterialDesignIconView fill="#7f7cd3" glyphName="FILE_CHART" size="30.0" StackPane.alignment="CENTER_LEFT"> 
+              <StackPane.margin> 
+                <Insets left="30.0" /> 
+              </StackPane.margin> 
+            </MaterialDesignIconView>  
+            <JFXTextField fx:id="reportSelectTextField" editable="false"> 
+              <StackPane.margin> 
+                <Insets left="70.0" right="80.0" /> 
+              </StackPane.margin>  
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font> 
+            </JFXTextField>  
+            <Label prefHeight="30.0" prefWidth="550.0" text="%W07.select_report.resource_id" StackPane.alignment="CENTER_LEFT"> 
+              <StackPane.margin> 
+                <Insets bottom="200.0" /> 
+              </StackPane.margin>  
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font> 
+            </Label>  
+            <JFXButton onAction="#reportSelectToCellSelect" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.next" StackPane.alignment="BOTTOM_RIGHT" />  
+            <JFXButton onAction="#openReportSelectDiarog" prefHeight="30.0" prefWidth="70.0" styleClass="button-prev" text="%W07.common.reference" StackPane.alignment="CENTER_RIGHT"> 
+              <StackPane.margin> 
+                <Insets /> 
+              </StackPane.margin> 
+            </JFXButton>  
+            <Label prefHeight="30.0" prefWidth="550.0" text="%W07.select_report.label" StackPane.alignment="CENTER_LEFT"> 
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font>  
+              <StackPane.margin> 
+                <Insets top="170.0" /> 
+              </StackPane.margin> 
+            </Label>  
+            <JFXTextField fx:id="reportNameTextField" editable="false" StackPane.alignment="CENTER_LEFT"> 
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font>  
+              <StackPane.margin> 
+                <Insets left="120.0" right="80.0" top="170.0" /> 
+              </StackPane.margin> 
+            </JFXTextField> 
+          </children>  
+          <StackPane.margin> 
+            <Insets left="200.0" /> 
+          </StackPane.margin> 
+        </StackPane>  
+        <StackPane fx:id="excelViewStackPane" prefHeight="456.0" prefWidth="740.0"> 
+          <children> 
+            <JFXCheckBox fx:id="inputCheckBox" onAction="#checkInput" text="%W07.select_position.input_check" StackPane.alignment="TOP_LEFT"> 
+              <StackPane.margin> 
+                <Insets /> 
+              </StackPane.margin> 
+            </JFXCheckBox>  
+            <JFXCheckBox fx:id="selectCheckBox" onAction="#checkPreview" text="%W07.select_position.select_check" StackPane.alignment="TOP_LEFT"> 
+              <StackPane.margin> 
+                <Insets top="25.0" /> 
+              </StackPane.margin> 
+            </JFXCheckBox>  
+            <JFXButton onAction="#openExcel" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.select_position.open" StackPane.alignment="TOP_RIGHT"> 
+              <StackPane.margin> 
+                <Insets top="10.0" /> 
+              </StackPane.margin> 
+            </JFXButton>  
+            <StackPane fx:id="previewStackPane" prefHeight="150.0" prefWidth="200.0"> 
+              <children> 
+                <Label prefHeight="30.0" prefWidth="322.0" text="%W07.select_position.select.select_cell" StackPane.alignment="TOP_LEFT"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font> 
+                </Label>  
+                <Label text="%W07.select_position.select.zoom" StackPane.alignment="TOP_RIGHT"> 
+                  <StackPane.margin> 
+                    <Insets right="230.0" top="5.0" /> 
+                  </StackPane.margin>  
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font> 
+                </Label> 
+              </children>  
+              <StackPane.margin> 
+                <Insets bottom="65.0" top="45.0" /> 
+              </StackPane.margin> 
+            </StackPane>  
+            <StackPane fx:id="inputStackPane" prefHeight="150.0" prefWidth="200.0"> 
+              <StackPane.margin> 
+                <Insets bottom="65.0" top="75.0" /> 
+              </StackPane.margin>  
+              <children> 
+                <Label prefHeight="30.0" prefWidth="322.0" text="%W07.select_position.input.input_cell" StackPane.alignment="TOP_LEFT"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font> 
+                </Label>  
+                <Label prefHeight="30.0" prefWidth="60.0" text="%W07.select_position.input.column" StackPane.alignment="CENTER_LEFT"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font>  
+                  <StackPane.margin> 
+                    <Insets bottom="100.0" left="75.0" /> 
+                  </StackPane.margin> 
+                </Label>  
+                <Label prefHeight="30.0" prefWidth="45.0" text="%W07.select_position.input.row" StackPane.alignment="CENTER_LEFT"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font>  
+                  <StackPane.margin> 
+                    <Insets bottom="100.0" left="320.0" /> 
+                  </StackPane.margin> 
+                </Label>  
+                <JFXTextField fx:id="columnTextField" maxWidth="100.0" StackPane.alignment="CENTER_LEFT"> 
+                  <StackPane.margin> 
+                    <Insets bottom="110.0" left="135.0" /> 
+                  </StackPane.margin> 
+                </JFXTextField>  
+                <JFXTextField fx:id="rowTextField" maxWidth="100.0" StackPane.alignment="CENTER_LEFT"> 
+                  <StackPane.margin> 
+                    <Insets bottom="110.0" left="365.0" /> 
+                  </StackPane.margin> 
+                </JFXTextField>  
+                <Label prefHeight="50.0" prefWidth="580.0" text="%W07.select_position.input.validation_msg" StackPane.alignment="CENTER_LEFT"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font>  
+                  <StackPane.margin> 
+                    <Insets top="80.0" /> 
+                  </StackPane.margin> 
+                </Label>  
+                <Label prefHeight="50.0" prefWidth="322.0" text="%W07.select_position.input.input_example" StackPane.alignment="CENTER_LEFT"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font>  
+                  <StackPane.margin> 
+                    <Insets left="30.0" top="150.0" /> 
+                  </StackPane.margin> 
+                </Label> 
+              </children> 
+            </StackPane>  
+            <Label prefHeight="30.0" prefWidth="322.0" text="%W07.select_position.sheet" StackPane.alignment="BOTTOM_LEFT"> 
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font>  
+              <StackPane.margin> 
+                <Insets bottom="35.0" /> 
+              </StackPane.margin> 
+            </Label>  
+            <JFXComboBox fx:id="sheetSelectComboBox" maxHeight="40.0" maxWidth="250.0" StackPane.alignment="BOTTOM_LEFT"> 
+              <StackPane.margin> 
+                <Insets top="400.0" /> 
+              </StackPane.margin> 
+            </JFXComboBox>  
+            <JFXButton onAction="#cellSelectToColumnSelect" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.next" StackPane.alignment="BOTTOM_RIGHT" />  
+            <JFXButton onAction="#reportSelectFromCellSelect" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.preview" StackPane.alignment="BOTTOM_RIGHT"> 
+              <StackPane.margin> 
+                <Insets right="150.0" /> 
+              </StackPane.margin> 
+            </JFXButton> 
+          </children>  
+          <StackPane.margin> 
+            <Insets left="200.0" /> 
+          </StackPane.margin> 
+        </StackPane>  
+        <StackPane fx:id="columnStackPane" prefHeight="456.0" prefWidth="740.0"> 
+          <children>  
+            <JFXButton onAction="#columnSelectToParameterSelect" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.next" StackPane.alignment="BOTTOM_RIGHT" />  
+            <JFXButton onAction="#cellSelectFromColumnSelect" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.preview" StackPane.alignment="BOTTOM_RIGHT"> 
+              <StackPane.margin> 
+                <Insets right="150.0" /> 
+              </StackPane.margin> 
+            </JFXButton> 
+            <Label prefHeight="30.0" prefWidth="580.0" text="%W07.select_column.header_msg" StackPane.alignment="TOP_LEFT"> 
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font> 
+            </Label>  
+            <JFXCheckBox fx:id="headerCheckBox" text="%W07.select_column.header_check" StackPane.alignment="TOP_LEFT"> 
+              <StackPane.margin> 
+                <Insets top="40.0" /> 
+              </StackPane.margin> 
+            </JFXCheckBox>
+                  <Label prefHeight="30.0" prefWidth="580.0" text="%W07.select_column.mode_msg" StackPane.alignment="TOP_LEFT">
+                     <font>
+                        <Font name="Meiryo UI" size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="70.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <JFXCheckBox fx:id="normalExecuteCheckBox" onAction="#checkNormal" selected="true" text="%W07.select_column.normal_check" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets top="110.0" />
+                     </StackPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="lowMemoryExecuteCheckBox" onAction="#checkLowMemory" text="%W07.select_column.low_memory_check" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="150.0" top="110.0" />
+                     </StackPane.margin>
+                  </JFXCheckBox>  
+            <Label prefHeight="30.0" prefWidth="580.0" text="%W07.select_column.select_msg" StackPane.alignment="TOP_LEFT"> 
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font>  
+              <StackPane.margin> 
+                <Insets top="140.0" /> 
+              </StackPane.margin> 
+            </Label>  
+            <ListSelectionView fx:id="listSelectionView" prefHeight="350.0" prefWidth="580.0"> 
+              <StackPane.margin> 
+                <Insets bottom="35.0" top="170.0" /> 
+              </StackPane.margin> 
+            </ListSelectionView> 
+          </children>  
+          <StackPane.margin> 
+            <Insets left="200.0" /> 
+          </StackPane.margin> 
+        </StackPane>  
+        <StackPane fx:id="parameterPane" prefHeight="150.0" prefWidth="200.0"> 
+          <StackPane.margin> 
+            <Insets left="200.0" /> 
+          </StackPane.margin>  
+          <children> 
+            <JFXTreeTableView fx:id="parameterTable" StackPane.alignment="CENTER"> 
+              <StackPane.margin> 
+                <Insets bottom="40.0" top="70.0" /> 
+              </StackPane.margin>  
+              <columns> 
+                <JFXTreeTableColumn fx:id="name" text="%W07.save_parameter.column_param" />  
+                <JFXTreeTableColumn fx:id="value" text="%W07.save_parameter.column_value" /> 
+              </columns> 
+            </JFXTreeTableView>  
+            <JFXButton fx:id="openReportExexuteButton" onAction="#openReportWindow" prefHeight="30.0" prefWidth="159.0" styleClass="button-prev" text="%W07.save_parameter.button_text" StackPane.alignment="TOP_RIGHT"> 
+              <StackPane.margin> 
+                <Insets top="30.0" /> 
+              </StackPane.margin> 
+            </JFXButton>  
+            <Label prefHeight="30.0" prefWidth="580.0" text="%W07.save_parameter.label_text" StackPane.alignment="TOP_LEFT"> 
+              <font> 
+                <Font name="Meiryo UI" size="14.0" /> 
+              </font> 
+            </Label>  
+            <JFXCheckBox fx:id="parameterCheckBox" text="%W07.save_parameter.check_text" StackPane.alignment="TOP_LEFT"> 
+              <StackPane.margin> 
+                <Insets left="20.0" top="30.0" /> 
+              </StackPane.margin> 
+            </JFXCheckBox>  
+            <JFXButton onAction="#columnSelectFromParameterSelect" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.preview" StackPane.alignment="BOTTOM_RIGHT"> 
+              <StackPane.margin> 
+                <Insets right="150.0" /> 
+              </StackPane.margin> 
+            </JFXButton>  
+            <JFXButton onAction="#saveSingleJob" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.save_parameter.complete_button_text" StackPane.alignment="BOTTOM_RIGHT" /> 
+          </children>
+        </StackPane> 
+      </children>
+    </StackPane>  
+    <StackPane fx:id="spinnerPane" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="800.0" styleClass="spinnerPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+      <children> 
+        <Label styleClass="spinnerText" text="%common.message.wait_a_moment"> 
+          <padding> 
+            <Insets top="130.0" /> 
+          </padding> 
+        </Label>  
+        <JFXSpinner radius="36.0" /> 
+      </children> 
+    </StackPane>  
+    <StackPane fx:id="homePane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0"> 
+      <children> 
+        <MaterialDesignIconView fill="#5bb25e" glyphName="FILE_EXCEL_BOX" size="30.0" StackPane.alignment="TOP_LEFT"> 
+          <StackPane.margin> 
+            <Insets left="30.0" top="70.0" /> 
+          </StackPane.margin> 
+        </MaterialDesignIconView>  
+        <JFXTextField fx:id="fileSelectTextField" editable="false" StackPane.alignment="TOP_CENTER"> 
+          <StackPane.margin> 
+            <Insets left="70.0" right="80.0" top="70.0" /> 
+          </StackPane.margin>  
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font> 
+        </JFXTextField>  
+        <Label prefHeight="30.0" prefWidth="412.0" text="%W07.select_excel.excel" StackPane.alignment="TOP_LEFT"> 
+          <StackPane.margin> 
+            <Insets top="30.0" /> 
+          </StackPane.margin>  
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font> 
+        </Label>  
+        <JFXButton onAction="#openFileExplorer" prefHeight="30.0" prefWidth="70.0" styleClass="button-prev" text="%W07.common.reference" StackPane.alignment="TOP_RIGHT"> 
+          <StackPane.margin> 
+            <Insets top="70.0" /> 
+          </StackPane.margin> 
+        </JFXButton>  
+        <Label prefHeight="30.0" prefWidth="412.0" text="%W07.home.label_text" StackPane.alignment="TOP_LEFT"> 
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font>  
+          <StackPane.margin> 
+            <Insets top="110.0" /> 
+          </StackPane.margin> 
+        </Label>  
+        <JFXTreeTableView fx:id="excelJobTable"> 
+          <StackPane.margin> 
+            <Insets bottom="60.0" top="140.0" /> 
+          </StackPane.margin>  
+          <columns> 
+            <JFXTreeTableColumn fx:id="reportLabel" text="%W08.table.label" />  
+            <JFXTreeTableColumn fx:id="targetColumn" text="%W08.table.column" />  
+            <JFXTreeTableColumn fx:id="sheet" text="%W08.table.sheet" />  
+            <JFXTreeTableColumn fx:id="cell" text="%W08.table.cell" /> 
+          </columns> 
+        </JFXTreeTableView>  
+        <HBox fx:id="editBox" alignment="BOTTOM_LEFT" maxHeight="45.0" maxWidth="470.0" prefHeight="45.0" prefWidth="470.0" spacing="10.0" StackPane.alignment="BOTTOM_LEFT"> 
+          <children> 
+            <JFXButton fx:id="createButton" layoutX="20.0" layoutY="47.0" minWidth="65.0" mnemonicParsing="false" onAction="#createJob" prefHeight="30.0" styleClass="create-job" text="%W08.button.create"> 
+              <graphic> 
+                <MaterialDesignIconView glyphName="PLUS_CIRCLE" size="2.0em" style="-fx-fill: WHITE;" /> 
+              </graphic> 
+            </JFXButton>  
+            <JFXButton fx:id="editButton" disable="true" layoutX="10.0" layoutY="37.0" minWidth="65.0" mnemonicParsing="false" onAction="#editJob" prefHeight="30.0" styleClass="edit-job" text="%W08.button.edit"> 
+              <graphic> 
+                <MaterialDesignIconView glyphName="WRENCH" size="2.0em" style="-fx-fill: WHITE;" /> 
+              </graphic> 
+            </JFXButton>  
+            <JFXButton fx:id="deleteButton" disable="true" layoutX="114.0" layoutY="10.0" minWidth="65.0" mnemonicParsing="false" onAction="#deleteJob" prefHeight="30.0" styleClass="delete-job" text="%W08.button.delete"> 
+              <graphic> 
+                <MaterialDesignIconView glyphName="DELETE" size="2.0em" style="-fx-fill: WHITE;" /> 
+              </graphic> 
+            </JFXButton> 
+          </children>  
+          <padding> 
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /> 
+          </padding>  
+          <StackPane.margin> 
+            <Insets bottom="10.0" /> 
+          </StackPane.margin> 
+        </HBox>  
+        <JFXButton minWidth="65.0" onAction="#homeToSave" prefHeight="30.0" styleClass="button-prev" text="%W07.common.next" StackPane.alignment="BOTTOM_RIGHT"> 
+          <padding> 
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /> 
+          </padding>  
+          <StackPane.margin> 
+            <Insets bottom="15.0" /> 
+          </StackPane.margin>
+        </JFXButton> 
+      </children> 
+    </StackPane>  
+    <StackPane fx:id="saveStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0"> 
+      <children> 
+        <Label prefHeight="30.0" prefWidth="580.0" text="%W07.specify_jobname.rewrite_msg" StackPane.alignment="TOP_LEFT"> 
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font> 
+        </Label>  
+        <Label prefHeight="30.0" prefWidth="415.0" text="%W07.specify_jobname.rewrite_warn_msg" textFill="RED" StackPane.alignment="TOP_LEFT"> 
+          <font> 
+            <Font name="Meiryo UI" size="12.0" /> 
+          </font>  
+          <StackPane.margin> 
+            <Insets left="20.0" top="22.0" /> 
+          </StackPane.margin> 
+        </Label>  
+        <JFXCheckBox fx:id="rewriteCheckBox" text="%W07.specify_jobname.rewrite_check" StackPane.alignment="TOP_LEFT"> 
+          <StackPane.margin> 
+            <Insets left="10.0" top="50.0" /> 
+          </StackPane.margin> 
+        </JFXCheckBox>  
+        <Label prefHeight="30.0" prefWidth="415.0" text="%W07.specify_jobname.excel" StackPane.alignment="TOP_LEFT"> 
+          <StackPane.margin> 
+            <Insets top="105.0" /> 
+          </StackPane.margin>  
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font> 
+        </Label>  
+        <JFXButton onAction="#saveFileExplorer" prefHeight="30.0" prefWidth="70.0" styleClass="button-prev" text="%W07.common.reference" StackPane.alignment="TOP_RIGHT"> 
+          <StackPane.margin> 
+            <Insets top="160.0" /> 
+          </StackPane.margin> 
+        </JFXButton>  
+        <JFXTextField fx:id="excelOutputTextField" editable="false" StackPane.alignment="TOP_CENTER"> 
+          <StackPane.margin> 
+            <Insets left="70.0" right="80.0" top="160.0" /> 
+          </StackPane.margin>  
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font> 
+        </JFXTextField>  
+        <MaterialDesignIconView fill="#5bb25e" glyphName="FILE_EXCEL_BOX" size="30.0" StackPane.alignment="TOP_LEFT"> 
+          <StackPane.margin> 
+            <Insets left="30.0" top="160.0" /> 
+          </StackPane.margin> 
+        </MaterialDesignIconView>  
+        <Label prefHeight="30.0" prefWidth="415.0" text="%W07.specify_jobname.job" StackPane.alignment="CENTER_LEFT"> 
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font>  
+          <StackPane.margin> 
+            <Insets top="100.0" /> 
+          </StackPane.margin> 
+        </Label>  
+        <JFXButton onAction="#saveJobExplorer" prefHeight="30.0" prefWidth="70.0" styleClass="button-prev" text="%W07.common.reference" StackPane.alignment="CENTER_RIGHT"> 
+          <StackPane.margin> 
+            <Insets top="200.0" /> 
+          </StackPane.margin> 
+        </JFXButton>  
+        <JFXTextField fx:id="jobOutputTextField" editable="false" StackPane.alignment="CENTER"> 
+          <font> 
+            <Font name="Meiryo UI" size="14.0" /> 
+          </font>  
+          <StackPane.margin> 
+            <Insets left="70.0" right="80.0" top="200.0" /> 
+          </StackPane.margin> 
+        </JFXTextField>  
+        <MaterialDesignIconView fill="#6f6f6f" glyphName="FLOPPY" size="30.0" StackPane.alignment="CENTER_LEFT"> 
+          <StackPane.margin> 
+            <Insets left="30.0" top="200.0" /> 
+          </StackPane.margin> 
+        </MaterialDesignIconView>  
+        <JFXButton onAction="#columnFromTitle" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.common.preview" StackPane.alignment="BOTTOM_RIGHT"> 
+          <StackPane.margin> 
+            <Insets right="150.0" /> 
+          </StackPane.margin> 
+        </JFXButton>  
+        <JFXButton onAction="#save" prefHeight="30.0" prefWidth="90.0" styleClass="button-prev" text="%W07.specify_jobname.save" StackPane.alignment="BOTTOM_RIGHT" /> 
+      </children> 
+    </StackPane> 
+  </children> 
+</AnchorPane>

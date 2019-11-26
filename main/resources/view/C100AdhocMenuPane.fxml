@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.adhoc.controller.C100AdhocMenuPane">
+   <children>
+		<VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<JFXButton onAction="#serverField" text="%P100.step.server">
+					<graphic>
+						<MaterialDesignIconView glyphName="SERVER_NETWORK" size="3em" />
+					 </graphic>
+				</JFXButton>
+				<JFXButton onAction="#localField" text="%P100.step.local">
+					 <graphic>
+					 	<MaterialDesignIconView glyphName="FILE_DOCUMENT" size="3em" />
+					 </graphic>
+				</JFXButton>
+			</children>
+		</VBox>
+   </children>
+</AnchorPane>

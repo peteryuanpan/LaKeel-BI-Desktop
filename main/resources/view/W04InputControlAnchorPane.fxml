@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.legendapl.lightning.controller.W04InputControlController">  
+  <children> 
+    <SplitPane fx:id="splitPane" dividerPositions="0.1" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+      <items> 
+        <StackPane fx:id="inputStack" minWidth="250.0" style="-fx-background-color: white;"> 
+          <children> 
+            <AnchorPane style="-fx-background-color: white;"> 
+              <children> 
+                <ScrollPane fx:id="inputControlPane" style="-fx-background-color: white; -fx-border-color: white;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+                  <content> 
+                    <AnchorPane fx:id="inputControlAnchorPane" style="-fx-background-color: white;"> 
+                      <children> 
+                        <VBox fx:id="inputVBox" maxWidth="300.0" minWidth="50.0" prefWidth="200.0" spacing="20.0" /> 
+                      </children> 
+                    </AnchorPane> 
+                  </content> 
+                </ScrollPane>  
+                <HBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"> 
+                  <children> 
+                    <JFXButton mnemonicParsing="false" onAction="#cancel" styleClass="button-raised-gray" text="%W04.button.cancel"> 
+                      <HBox.margin> 
+                        <Insets /> 
+                      </HBox.margin> 
+                    </JFXButton>  
+                    <JFXButton fx:id="saveButton" mnemonicParsing="false" onAction="#save" styleClass="button-raised-green" text="%W04.button.save" visible="false" /> 
+                  </children> 
+                </HBox>  
+                <HBox fx:id="inputControlHBox" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0"> 
+                  <children> 
+                    <JFXButton mnemonicParsing="false" onAction="#report" styleClass="button-raised-blue" text="%W04.button.execute" />  
+                    <JFXButton mnemonicParsing="false" onAction="#clear" styleClass="button-raised-gray" text="%W04.button.clear" /> 
+                  </children> 
+                </HBox> 
+              </children>  
+              <padding> 
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" /> 
+              </padding> 
+            </AnchorPane> 
+          </children> 
+        </StackPane>  
+        <AnchorPane fx:id="ReportStackPane" prefHeight="552.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+          <children> 
+            <SwingNode fx:id="swingNode" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />  
+            <StackPane fx:id="spinnerPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+              <children> 
+                <JFXSpinner radius="30.0"> 
+                  <StackPane.margin> 
+                    <Insets bottom="30.0" /> 
+                  </StackPane.margin> 
+                </JFXSpinner>  
+                <Label alignment="CENTER" text="%common.message.wait_a_moment" StackPane.alignment="CENTER"> 
+                  <font> 
+                    <Font name="Meiryo UI" size="21.0" /> 
+                  </font>  
+                  <StackPane.margin> 
+                    <Insets top="100.0" /> 
+                  </StackPane.margin> 
+                </Label> 
+              </children> 
+            </StackPane>  
+            <StackPane fx:id="completePane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+              <children> 
+                <MaterialDesignIconView fill="#7597f2" glyphName="CHECK" size="90"> 
+                  <StackPane.margin> 
+                    <Insets bottom="30.0" /> 
+                  </StackPane.margin> 
+                </MaterialDesignIconView>  
+                <Label text="%W04.message.export_completed"> 
+                  <StackPane.margin> 
+                    <Insets top="100.0" /> 
+                  </StackPane.margin>  
+                  <font> 
+                    <Font name="Meiryo UI" size="21.0" /> 
+                  </font> 
+                </Label>  
+                <JFXButton onAction="#openFile" style="-fx-text-fill: WHITE; -fx-background-color: rgb(41,182,246);" text="%W04.button.open"> 
+                  <StackPane.margin> 
+                    <Insets top="200.0" /> 
+                  </StackPane.margin> 
+                  <font> 
+                    <Font name="Meiryo UI" size="14.0" /> 
+                  </font> 
+                </JFXButton> 
+              </children> 
+            </StackPane>  
+            <StackPane fx:id="failedPane" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+              <children> 
+                <StackPane maxHeight="552.0" minHeight="150.0" prefHeight="552.0" prefWidth="582.0"> 
+                  <StackPane.margin> 
+                    <Insets bottom="500.0" left="100.0" right="100.0" top="50.0" /> 
+                  </StackPane.margin>  
+                  <children> 
+                    <MaterialDesignIconView fill="#ff6262" glyphName="CLOSE" size="90"> 
+                      <StackPane.margin> 
+                        <Insets /> 
+                      </StackPane.margin> 
+                    </MaterialDesignIconView>  
+                    <Label text="%W04.message.execute_failed"> 
+                      <StackPane.margin> 
+                        <Insets top="100.0" /> 
+                      </StackPane.margin>  
+                      <font> 
+                        <Font name="Meiryo UI" size="21.0" /> 
+                      </font> 
+                    </Label> 
+                  </children> 
+                </StackPane>  
+                <StackPane maxHeight="300.0" minHeight="150.0" prefHeight="150.0" prefWidth="200.0"> 
+                  <StackPane.margin> 
+                    <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" /> 
+                  </StackPane.margin>  
+                  <children> 
+                    <TextArea fx:id="errorLog" editable="false" prefHeight="200.0" prefWidth="200.0" /> 
+                  </children> 
+                </StackPane>  
+                <StackPane maxHeight="200.0" minHeight="150.0" prefHeight="150.0" prefWidth="200.0"> 
+                  <StackPane.margin> 
+                    <Insets bottom="50.0" left="100.0" right="100.0" top="500.0" /> 
+                  </StackPane.margin>  
+                  <children> 
+                    <JFXButton onAction="#openErrorLog" style="-fx-text-fill: WHITE; -fx-background-color: rgb(255,0,0);" text="%W04.button.errorlog.open"> 
+                      <font> 
+                        <Font name="Meiryo UI" size="14.0" /> 
+                      </font>  
+                      <StackPane.margin> 
+                        <Insets bottom="100.0" /> 
+                      </StackPane.margin> 
+                    </JFXButton> 
+                  </children> 
+                </StackPane> 
+              </children> 
+            </StackPane>
+          </children> 
+        </AnchorPane> 
+      </items> 
+    </SplitPane> 
+  </children> 
+</AnchorPane>
