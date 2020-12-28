@@ -10,6 +10,4 @@ JasperReports Server 及 SDK 详见：https://github.com/Jaspersoft/jrs-rest-jav
 
 数据库：JDBC
 
-消息队列：自实现
-
 前端：JAVAFX
